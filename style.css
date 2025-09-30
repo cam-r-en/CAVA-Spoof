@@ -1,0 +1,149 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background-image: url("imgs/CAVA.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  border: 5px solid yellow;
+  box-sizing: border-box;
+}
+
+.title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: yellow;
+}
+
+.title img {
+  margin: 0;
+  padding: 0;
+  color: black;
+  height: 25px;
+  margin-top: 3.5px;
+  margin-right: 25px;
+  float: right;
+}
+
+.navbar {
+  width: 100%;
+  padding: 0px;
+  position: relative;
+  background-color: yellow;
+  height: 30px;
+  gap: 10px;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+.navbar ul li {
+  margin: 1px;
+  margin-right: 5px;
+}
+.navbar ul li a {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 1px;
+  display: block;
+}
+ul {
+  list-style-type: circle;
+  text-align: center;
+  gap: 10px;
+}
+
+.footer {
+  background-color: black;
+  width: 100%;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-self: center;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.socials a {
+  color: yellow;
+  font-family: "Times New Roman", Times, serif, sans-serif;
+  text-decoration: underline;
+  font-size: large;
+}
+.socials img {
+  height: 20px;
+  width: auto;
+}
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .navbar ul {
+    gap: 10px;
+  }
+  .navbar ul li a {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+
+  .title img {
+    height: 25px;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .navbar {
+    height: 30px;
+    padding: 0px;
+  }
+  .navbar ul {
+    flex-direction: row;
+  }
+  .navbar ul li a {
+    font-size: 20px;
+    padding: 0px;
+    margin-right: 15px;
+  }
+
+  .contacts {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .socials {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .socials a {
+    font-size: 14px;
+  }
+  .socials img {
+    height: 20px;
+  }
+}

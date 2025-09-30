@@ -1,0 +1,237 @@
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background-color: black;
+  border: 5px solid darkorange;
+  box-sizing: border-box;
+  color: white;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid white;
+  margin-bottom: 0px;
+}
+
+.t-title {
+  text-align: center;
+  align-items: center;
+  margin-top: 0px;
+  background-color: darkorange;
+  height: 20px;
+  color: black;
+}
+.c-head {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+}
+.c-text {
+  position: relative;
+  color: darkorange;
+  font-family: "Times New Roman", Times, serif, sans-serif;
+  font-size: xx-large;
+  -webkit-text-stroke: 1px black; /* Sets the outline width and color */
+  position: absolute;
+  top: 7%;
+  left: 37%;
+  text-decoration: underline;
+  text-align: center;
+}
+.c-head img {
+  width: 100%;
+  height: auto;
+  margin-top: -22px;
+  filter: brightness(50%);
+  border: 2px solid white;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+.l-title {
+  justify-content: center;
+  text-align: center;
+  margin-top: 300px;
+}
+.l-title h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 100px;
+  font-weight: bolder;
+  text-decoration: underline;
+  color: black;
+  -webkit-text-stroke: 3px darkorange; /* Sets the outline width and color */
+  margin-bottom: 0px;
+  margin-top: -20px;
+}
+.l-title p {
+  margin-top: 0px;
+}
+.l-content {
+  justify-content: center;
+  text-align: center;
+}
+.l-content p {
+  margin-bottom: 3px;
+}
+.l-content a {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: xx-large;
+  color: darkorange;
+  font-weight: bolder;
+}
+.l-content img {
+  border: 3px solid darkorange;
+  border-radius: 5px;
+  height: 600px;
+  width: auto;
+}
+
+.hello {
+  color: darkorange;
+  margin-bottom: -5px;
+  margin-left: 5px;
+}
+
+.r-out {
+  background-color: darkorange;
+  justify-items: center;
+}
+.r-out form {
+  text-align: center;
+}
+#message {
+  height: 100px;
+  width: 500px;
+}
+#submit {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.footer {
+  background-color: black;
+  margin-top: 0px;
+  margin-bottom: -25px;
+}
+.navbar {
+  width: 100%;
+  padding: 0px;
+  position: relative;
+  background-color: white;
+  height: 30px;
+  gap: 10px;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.navbar ul li {
+  margin: 1px;
+  margin-right: 5px;
+}
+.navbar ul li a {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 1px;
+  display: block;
+}
+ul {
+  list-style-type: circle;
+  text-align: center;
+  gap: 10px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-self: center;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.socials a {
+  color: white;
+  font-family: "Times New Roman", Times, serif, sans-serif;
+  text-decoration: underline;
+  font-size: large;
+}
+.socials img {
+  height: 20px;
+  width: auto;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .c-text {
+    top: 0;
+    left: 23%;
+  }
+  .location {
+    display: flex;
+    flex-direction: column;
+  }
+  .l-title {
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+  .l-title h1 {
+    font-size: 75px;
+  }
+  .l-content {
+    margin-top: -50px;
+  }
+  .l-content img {
+    height: 500px;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .c-text {
+    left: 20%;
+    top: -20px;
+  }
+  .location {
+    display: flex;
+    flex-direction: column;
+  }
+  .l-title {
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+  .l-title h1 {
+    font-size: 75px;
+  }
+  .l-content {
+    margin-top: -50px;
+  }
+  .l-content img {
+    height: 400px;
+  }
+  #message {
+  height: 100px;
+  width: 400px;
+}
+}
