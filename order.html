@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAVA Menu</title>
+    <link rel="stylesheet" href="orders.css" />
+  </head>
+  <body>
+    <!-- Header with Cart -->
+    <div class="o-head">
+      <div class="o-text">
+        <h1>ORDER HERE</h1>
+        <nav class="navbar" id="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="order.html">Order</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="cart-container">
+        <img id="cart-icon" src="imgs/F.Bag.png" alt="CAVA MENU" />
+        <span id="cart-count">0</span>
+      </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div id="cart-drawer">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <button id="close-cart">Close</button>
+    </div>
+
+    <h1>Bowls & Pitas Menu</h1>
+
+    <!-- ================= SIGNATURE BOWLS ================= -->
+    <form id="sigBowlForm">
+      <h2>Signature Bowls</h2>
+
+      <fieldset>
+        <legend>Greek Chicken Bowl</legend>
+        <input
+          type="checkbox"
+          name="sig-greek-chicken-topping"
+          value="Tomato + Onion"
+          checked
+        />
+        <label>Tomato + Onion</label><br />
+        <input
+          type="checkbox"
+          name="sig-greek-chicken-topping"
+          value="Pickled Onions"
+          checked
+        />
+        <label>Pickled Onions</label><br />
+        <input
+          type="checkbox"
+          name="sig-greek-chicken-topping"
+          value="Avocado"
+          checked
+        />
+        <label>Avocado</label><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Harissa Avocado Bowl</legend>
+        <input
+          type="checkbox"
+          name="sig-harissa-topping"
+          value="Greens"
+          checked
+        />
+        <label>Greens</label><br />
+        <input
+          type="checkbox"
+          name="sig-harissa-topping"
+          value="Feta"
+          checked
+        />
+        <label>Feta</label><br />
+        <input
+          type="checkbox"
+          name="sig-harissa-topping"
+          value="Pickled Onions"
+          checked
+        />
+        <label>Pickled Onions</label><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Spicy Lamb + Avocado Bowl</legend>
+        <input
+          type="checkbox"
+          name="sig-spicy-lamb-topping"
+          value="Tomato + Onion"
+          checked
+        />
+        <label>Tomato + Onion</label><br />
+        <input
+          type="checkbox"
+          name="sig-spicy-lamb-topping"
+          value="Pickled Onions"
+          checked
+        />
+        <label>Pickled Onions</label><br />
+        <input
+          type="checkbox"
+          name="sig-spicy-lamb-topping"
+          value="Avocado"
+          checked
+        />
+        <label>Avocado</label><br />
+      </fieldset>
+
+      <button type="button" class="add-to-cart">
+        Add Signature Bowl(s) to Cart
+      </button>
+    </form>
+
+    <hr />
+
+    <!-- ================= CUSTOM BOWLS ================= -->
+    <form id="customBowlForm" data-custom="true">
+      <h2>Customize Your Own Bowl</h2>
+
+      <fieldset>
+        <legend>Bases (required)</legend>
+        <input type="checkbox" name="base" value="SuperGreens" />
+        SuperGreens<br />
+        <input type="checkbox" name="base" value="Romaine" /> Romaine<br />
+        <input type="checkbox" name="base" value="Basmati Rice" /> Basmati
+        Rice<br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Proteins (required)</legend>
+        <input type="checkbox" name="protein" value="Grilled Chicken" /> Grilled
+        Chicken<br />
+        <input type="checkbox" name="protein" value="Falafel" /> Falafel<br />
+        <input type="checkbox" name="protein" value="Braised Lamb" /> Braised
+        Lamb<br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Spreads & Dips</legend>
+        <input type="checkbox" name="spread" value="Hummus" /> Hummus<br />
+        <input type="checkbox" name="spread" value="Tzatziki" /> Tzatziki<br />
+        <input type="checkbox" name="spread" value="Red Pepper Hummus" /> Red
+        Pepper Hummus<br />
+        <input type="checkbox" name="spread" value="Crazy Feta" /> Crazy
+        Feta®<br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Toppings</legend>
+        <input type="checkbox" name="topping" value="Tomato + Onion Salad" />
+        Tomato + Onion Salad<br />
+        <input type="checkbox" name="topping" value="Pickled Onions" /> Pickled
+        Onions<br />
+        <input type="checkbox" name="topping" value="Avocado" /> Avocado<br />
+        <input type="checkbox" name="topping" value="Kalamata Olives" />
+        Kalamata Olives<br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Dressings (required)</legend>
+        <input type="checkbox" name="dressing" value="Greek Vinaigrette" />
+        Greek Vinaigrette<br />
+        <input type="checkbox" name="dressing" value="Lemon Herb Tahini" />
+        Lemon Herb Tahini<br />
+        <input
+          type="checkbox"
+          name="dressing"
+          value="Hot Harissa Vinaigrette"
+        />
+        Hot Harissa Vinaigrette<br />
+      </fieldset>
+
+      <button type="button" class="add-to-cart">Add Custom Bowl to Cart</button>
+    </form>
+
+    <hr />
+
+    <!-- ================= SIGNATURE PITAS ================= -->
+    <form id="sigPitaForm">
+      <h2>Signature Pitas</h2>
+
+      <fieldset>
+        <legend>Greek Chicken Pita</legend>
+        <input
+          type="checkbox"
+          name="sig-greek-pita-topping"
+          value="Tomato + Onion"
+          checked
+        />
+        <label>Tomato + Onion</label><br />
+        <input
+          type="checkbox"
+          name="sig-greek-pita-topping"
+          value="Pickled Onions"
+          checked
+        />
+        <label>Pickled Onions</label><br />
+        <input
+          type="checkbox"
+          name="sig-greek-pita-topping"
+          value="Avocado"
+          checked
+        />
+        <label>Avocado</label><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Steak & Feta Pita</legend>
+        <input
+          type="checkbox"
+          name="sig-steak-feta-pita-topping"
+          value="Briny Pickles"
+          checked
+        />
+        <label>Briny Pickles</label><br />
+        <input
+          type="checkbox"
+          name="sig-steak-feta-pita-topping"
+          value="Pickled Onions"
+          checked
+        />
+        <label>Pickled Onions</label><br />
+      </fieldset>
+
+      <button type="button" class="add-to-cart">
+        Add Signature Pita(s) to Cart
+      </button>
+    </form>
+
+    <hr />
+
+    <!-- ================= CUSTOM PITAS ================= -->
+    <form id="customPitaForm" data-custom="true">
+      <h2>Customize Your Own Pita</h2>
+
+      <fieldset>
+        <legend>Proteins (required)</legend>
+        <input type="checkbox" name="protein" value="Grilled Chicken" /> Grilled
+        Chicken<br />
+        <input type="checkbox" name="protein" value="Falafel" /> Falafel<br />
+        <input type="checkbox" name="protein" value="Braised Lamb" /> Braised
+        Lamb<br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Spreads & Dips</legend>
+        <input type="checkbox" name="spread" value="Hummus" /> Hummus<br />
+        <input type="checkbox" name="spread" value="Tzatziki" /> Tzatziki<br />
+        <input type="checkbox" name="spread" value="Red Pepper Hummus" /> Red
+        Pepper Hummus<br />
+        <input type="checkbox" name="spread" value="Crazy Feta" /> Crazy
+        Feta®<br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Toppings</legend>
+        <input type="checkbox" name="topping" value="Tomato + Onion Salad" />
+        Tomato + Onion Salad<br />
+        <input type="checkbox" name="topping" value="Pickled Onions" /> Pickled
+        Onions<br />
+        <input type="checkbox" name="topping" value="Avocado" /> Avocado<br />
+        <input type="checkbox" name="topping" value="Kalamata Olives" />
+        Kalamata Olives<br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Dressings (required)</legend>
+        <input type="checkbox" name="dressing" value="Greek Vinaigrette" />
+        Greek Vinaigrette<br />
+        <input type="checkbox" name="dressing" value="Lemon Herb Tahini" />
+        Lemon Herb Tahini<br />
+        <input
+          type="checkbox"
+          name="dressing"
+          value="Hot Harissa Vinaigrette"
+        />
+        Hot Harissa Vinaigrette<br />
+      </fieldset>
+
+      <button type="button" class="add-to-cart">Add Custom Pita to Cart</button>
+    </form>
+
+    <hr />
+
+    <h1>Drinks Menu</h1>
+
+    <!-- ================= DRINKS FORM ================= -->
+    <form id="drinksForm">
+      <h2>Signature Pitas</h2>
+
+      <fieldset>
+        <legend>Pineapple Apple Mint</legend>
+        <input type="checkbox" name="small" value="small" unchecked />
+        <label>Small</label><br />
+        <input type="checkbox" name="large" value="large" unchecked />
+        <label>Large</label><br />
+      </fieldset>
+      <fieldset>
+        <legend>Blueberry Lavender</legend>
+        <input type="checkbox" name="small" value="small" unchecked />
+        <label>Small</label><br />
+        <input type="checkbox" name="large" value="large" unchecked />
+        <label>Large</label><br />
+      </fieldset>
+      <fieldset>
+        <legend>Cucumber Mint Lime</legend>
+        <input type="checkbox" name="small" value="small" unchecked />
+        <label>Small</label><br />
+        <input type="checkbox" name="large" value="large" unchecked />
+        <label>Large</label><br />
+      </fieldset>
+      <fieldset>
+        <legend>Classic Lemonade</legend>
+        <input type="checkbox" name="small" value="small" unchecked />
+        <label>Small</label><br />
+        <input type="checkbox" name="large" value="large" unchecked />
+        <label>Large</label><br />
+      </fieldset>
+      <fieldset>
+        <legend>Jasmine Green Tea</legend>
+        <input type="checkbox" name="small" value="small" unchecked />
+        <label>Small</label><br />
+        <input type="checkbox" name="large" value="large" unchecked />
+        <label>Large</label><br />
+      </fieldset>
+      <fieldset>
+        <legend>Unsweet Tea</legend>
+        <input type="checkbox" name="small" value="small" unchecked />
+        <label>Small</label><br />
+        <input type="checkbox" name="large" value="large" unchecked />
+        <label>Large</label><br />
+      </fieldset>
+      <fieldset>
+        <legend>Fountain Soda</legend>
+        <input type="checkbox" name="small" value="small" unchecked />
+        <label>Small</label><br />
+        <input type="checkbox" name="large" value="large" unchecked />
+        <label>Large</label><br />
+      </fieldset>
+
+      <button type="button" class="add-to-cart">Add Drink(s) to Cart</button>
+    </form>
+
+    <script src="orders.js"></script>
+  </body>
+</html>
